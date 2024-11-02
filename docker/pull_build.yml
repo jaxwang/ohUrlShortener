@@ -2,7 +2,7 @@ version: '3'
 services:
 
   ohurlshortener-admin:
-    image: baratsemet/ohurlshortener-admin:${OH_ADMIN_VERSION}
+    image: dockerpull.org/baratsemet/ohurlshortener-admin:${OH_ADMIN_VERSION}
     container_name: ${OH_ADMIN_CONTAINER_NAME} 
     hostname: oh_admin
     volumes:
@@ -18,7 +18,7 @@ services:
       - ohurlshortener      
 
   ohurlshortener-portal:
-    image: baratsemet/ohurlshortener-portal:${OH_PORTAL_VERSION}
+    image: dockerpull.org/baratsemet/ohurlshortener-portal:${OH_PORTAL_VERSION}
     container_name: ${OH_PORTAL_CONTAINER_NAME} 
     hostname: oh_portal
     volumes:
@@ -34,7 +34,7 @@ services:
       - ohurlshortener       
 
   postgres:
-    image: postgres:${PG_VERSION}
+    image: dockerpull.org/postgres:${PG_VERSION}
     container_name: ${PG_CONTAINER_NAME}
     hostname: postgres
     environment:
@@ -54,7 +54,7 @@ services:
       - ohurlshortener      
 
   redis:
-    image: redis:${RD_VERSION}
+    image: dockerpull.org/redis:${RD_VERSION}
     container_name: ${RD_CONTAINER_NAME}
     hostname: redis        
     healthcheck:
